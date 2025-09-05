@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
     console.log('フォーム送信:', formData);
     // ここに実際の送信処理を実装
     try {
-      const res = await fetch('/api', {
+      const res = await fetch('api/request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
