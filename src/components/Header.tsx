@@ -49,14 +49,13 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'shadow-lg' : ''
-    }`} style={{ backgroundColor: '#1F2F4D' }}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''
+      }`} style={{ backgroundColor: '#1F2F4D' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <button 
+            <button
               onClick={() => handleNavigation('/')}
               className="text-2xl font-bold text-white hover:text-gray-200 transition-colors duration-200 flex items-center space-x-2"
             >
@@ -71,20 +70,19 @@ const Header: React.FC = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`text-white hover:text-gray-200 transition-colors duration-200 font-medium ${
-                  location.pathname === item.path ? 'border-b-2 border-white pb-1' : ''
-                }`}
+                className={`text-white hover:text-gray-200 transition-colors duration-200 font-medium ${location.pathname === item.path ? 'border-b-2 border-white pb-1' : ''
+                  }`}
               >
                 {item.name}
               </button>
             ))}
-            <button 
+            <button
               onClick={() => handleContactNavigation('contact')}
               className="bg-white text-[#1F2F4D] px-8 py-4 rounded-lg font-semibold hover:bg-white transition-all duration-200 transform hover:scale-105 shadow-lg text-lg"
             >
               お問い合わせ
             </button>
-            <button 
+            <button
               onClick={() => handleContactNavigation('document')}
               className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all duration-200 transform hover:scale-105 shadow-lg text-lg"
             >
@@ -113,23 +111,22 @@ const Header: React.FC = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item.path)}
-                  className={`text-white hover:text-gray-200 transition-colors duration-200 font-medium px-2 py-1 text-left ${
-                    location.pathname === item.path ? 'border-l-2 border-white pl-4' : ''
-                  }`}
+                  className={`text-white hover:text-gray-200 transition-colors duration-200 font-medium px-2 py-1 text-left ${location.pathname === item.path ? 'border-l-2 border-white pl-4' : ''
+                    }`}
                 >
                   {item.name}
                 </button>
               ))}
-              <button className="bg-gray-900 text-white px-6 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200 w-full mt-4 text-lg">
+              {/* <button className="bg-gray-900 text-white px-6 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200 w-full mt-4 text-lg">
                 お問い合わせ
-              </button>
-              <button 
+              </button> */}
+              <button
                 onClick={() => handleContactNavigation('contact')}
                 className="bg-white text-[#1F2F4D] border border-[#1F2F4D] px-6 py-4 rounded-lg font-semibold hover:bg-[#1F2F4D] hover:text-white transition-colors duration-200 w-full mt-4 text-lg"
               >
                 お問い合わせ
               </button>
-              <button 
+              <button
                 onClick={() => handleContactNavigation('document')}
                 className="bg-red-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 w-full mt-2 text-lg"
               >
