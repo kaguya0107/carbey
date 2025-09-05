@@ -59,7 +59,8 @@ const Header: React.FC = () => {
               onClick={() => handleNavigation('/')}
               className="text-2xl font-bold text-white hover:text-gray-200 transition-colors duration-200 flex items-center space-x-2"
             >
-              <Car className="h-8 w-8" />
+              {/* <Car className="h-8 w-8" /> */}
+              <img src='/logo.png' alt='Carbey Logo' className='h-10 w-auto' />
               <span>Carbey</span>
             </button>
           </div>
