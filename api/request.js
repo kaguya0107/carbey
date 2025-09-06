@@ -3,7 +3,7 @@ export default async function handler(req, res) {
         const data = req.body;
 
         // Forward to Google Apps Script
-        await fetch("https://script.google.com/macros/s/AKfycbz1OsVATBozZnN0Yix3nMZFhXqmKoUMDW21QByl-6qRkgN9axnGIHV8R3Wh1DSZ5qsiLw/exec", {
+        await fetch("https://script.google.com/macros/library/d/116va5MqZDG649GSxwvLeA2KO5xA6cy0Izy8SOvDX4HyCnoQBME3LydIG/4", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),

@@ -40,8 +40,8 @@ const Contact: React.FC = () => {
 
         // 🔽 Trigger PDF download
         const link = document.createElement("a");
-        link.href = "/example.pdf"; // must be inside public/
-        link.download = "Newdocument.pdf";
+        link.href = "/Carbey資料請求.pdf"; // must be inside public/
+        link.download = "Carbey資料請求.pdf";
         link.click();
       } else {
         setStatus("Error submitting form.");
