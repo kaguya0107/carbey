@@ -23,6 +23,8 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    location.search.includes("type=document") ? formData.type = "document" : formData.type = "contact";
     console.log('フォーム送信:', formData);
 
     // ここに実際の送信処理を実装
