@@ -23,9 +23,13 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('フォーム送信:', formData);
+
     console.log('送信先URL:', 'api/request');
 
     const url = new URL(window.location.href);
+
+    console.log('Current URL:', url.href);
+
 
     // Check query parameter "type"
     if (url.searchParams.get("type") === "document") {
