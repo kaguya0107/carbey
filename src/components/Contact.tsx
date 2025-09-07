@@ -43,10 +43,14 @@ const Contact: React.FC = () => {
         setStatus("Form submitted successfully!");
 
         // 🔽 Trigger PDF download
-        const link = document.createElement("a");
-        link.href = "/Carbey資料請求.pdf"; // must be inside public/
-        link.download = "Carbey資料請求.pdf";
-        link.click();
+        if (formData.type === "document") {
+          console.log("Downloading PDF...");
+          const link = document.createElement("a");
+          link.href = "/Carbey資料請求.pdf"; // must be inside public/
+          link.download = "Carbey資料請求.pdf";
+          link.click();
+        }
+
       } else {
         setStatus("Error submitting form.");
       }
