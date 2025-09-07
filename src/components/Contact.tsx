@@ -8,7 +8,8 @@ const Contact: React.FC = () => {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    type: location.search.includes("type=document") ? "document" : "contact"
   });
   const [status, setStatus] = useState<string | null>(null);
 
@@ -23,18 +24,6 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('フォーム送信:', formData);
-
-    console.log('送信先URL:', 'api/request');
-
-    const url = new URL(window.location.href);
-
-    console.log('Current URL:', url.href);
-
-
-    // Check query parameter "type"
-    if (url.searchParams.get("type") === "document") {
-      console.log("Type is document");
-    }
 
     // ここに実際の送信処理を実装
     try {
