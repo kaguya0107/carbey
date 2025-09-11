@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FileText, Download, Car, Handshake, BarChart3, Settings } from 'lucide-react';
 import Modal from './Modal';
+import { toast } from "react-toastify";
 
 const Services: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,7 +11,7 @@ const Services: React.FC = () => {
 
   const handleDownload = () => {
     // ここに実際のダウンロード処理を実装
-    console.log('ホワイトペーパーをダウンロード中...');
+    toast.success("ホワイトペーパーをダウンロード中...");
     setIsModalOpen(false);
   };
 

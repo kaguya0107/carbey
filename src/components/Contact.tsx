@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC = () => {
@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
     message: '',
     type: location.search.includes("type=document") ? "document" : "contact"
   });
-  const [status, setStatus] = useState<string | null>(null);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,40 +27,43 @@ const Contact: React.FC = () => {
     e.preventDefault();
 
     location.search.includes("type=document") ? formData.type = "document" : formData.type = "contact";
-    toast.success("フォームを送信しました！追ってご連絡いたします。");
-    console.log('フォーム送信:', formData);
 
-    // ここに実際の送信処理を実装
     try {
       const res = await fetch('api/request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
-        // body: JSON.stringify({ name: "Buddy", company: "CTN", email: "nightfurry2345@gmil.com", phone: "090-1234-5678", message: "Hello World" })
       });
 
       const data = await res.json();
-      console.log('サーバー応答:', data);
 
       if (data.status === "success") {
-        setStatus("Form submitted successfully!");
+        // 🔽 Clear form
+        setFormData({
+          company: '',
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          type: formData.type
+        });
 
         // 🔽 Trigger PDF download
         if (formData.type === "document") {
-          console.log("Downloading PDF...");
+          toast.success("資料請求ありがとうございます！ダウンロードが始まります。");
           const link = document.createElement("a");
           link.href = "/Carbey資料請求.pdf"; // must be inside public/
           link.download = "Carbey資料請求.pdf";
           link.click();
+        } else {
+          toast.success("お問い合わせありがとうございます！追ってご連絡いたします。");
         }
 
       } else {
-        setStatus("Error submitting form.");
+        toast.error("送信に失敗しました。もう一度お試しください。");
       }
-      // setStatus(data.status === "success" ? "Form submitted successfully!" : "Error submitting form.");
     } catch (err) {
       console.error(err);
-      // setStatus("Error submitting form.");
     }
   };
 
@@ -177,13 +180,10 @@ const Contact: React.FC = () => {
             {/* 送信ボタン */}
             <div className="text-center pt-4">
               <button
-                // onClick={handleSubmit}
                 type="submit"
                 className="bg-slate-700 text-white px-12 py-4 rounded-lg font-medium hover:bg-slate-800 transition-colors duration-200 text-lg"
               >
-                {/* <a href="/example.pdf" download="MyDocument.pdf"> */}
                 送信
-                {/* </a> */}
               </button>
             </div>
           </form>
