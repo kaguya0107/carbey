@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC = () => {
   const location = useLocation();
@@ -25,6 +27,7 @@ const Contact: React.FC = () => {
     e.preventDefault();
 
     location.search.includes("type=document") ? formData.type = "document" : formData.type = "contact";
+    toast.success("フォームを送信しました！追ってご連絡いたします。");
     console.log('フォーム送信:', formData);
 
     // ここに実際の送信処理を実装
