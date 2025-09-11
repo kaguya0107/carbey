@@ -1,5 +1,4 @@
 import React from 'react';
-import { TrendingUp, BarChart3, Shield } from 'lucide-react';
 
 const About: React.FC = () => {
   return (

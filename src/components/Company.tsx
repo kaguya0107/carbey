@@ -133,7 +133,7 @@ const Company: React.FC = () => {
                           {item.label}
                         </td>
                         <td className="px-6 py-4 text-gray-900">
-                          {item.isLink ? (
+                          {/* {item.isLink ? (
                             <a
                               href={item.value}
                               target="_blank"
@@ -142,9 +142,9 @@ const Company: React.FC = () => {
                             >
                               {item.value}
                             </a>
-                          ) : (
+                          ) : ( */
                             <div className="whitespace-pre-line">{item.value}</div>
-                          )}
+                          }
                         </td>
                       </tr>
                     ))}
