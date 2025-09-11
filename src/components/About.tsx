@@ -5,10 +5,10 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-20 lg:py-32 text-white"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg)',
+          backgroundImage: 'url("/img5.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -33,7 +33,7 @@ const About: React.FC = () => {
           <p className="text-xl text-gray-600 mb-12">
             私たちが実現したいこと
           </p>
-          
+
           <div className="max-w-3xl mx-auto space-y-8 text-lg text-gray-700 leading-loose">
             <p className="text-2xl font-semibold text-gray-900">
               最新テクノロジーで中古車売買をもっと簡単に。
@@ -61,7 +61,7 @@ const About: React.FC = () => {
           <p className="text-xl text-gray-600 mb-12">
             私たちが目指す未来
           </p>
-          
+
           <div className="max-w-3xl mx-auto space-y-8 text-lg text-gray-700 leading-loose">
             <p className="text-2xl font-semibold text-gray-900">
               儲かる車屋をみんなの手に。
@@ -89,7 +89,7 @@ const About: React.FC = () => {
 
         <div className="space-y-0">
           {/* Feature 1 */}
-          <div 
+          <div
             className="relative min-h-[400px] flex items-center justify-center text-white"
             style={{
               backgroundImage: 'url(https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg)',
@@ -97,7 +97,7 @@ const About: React.FC = () => {
               backgroundPosition: 'center'
             }}
           >
-            <div 
+            <div
               className="absolute inset-0"
               style={{
                 background: 'linear-gradient(180deg, rgba(31,47,77,.80) 0%, rgba(31,47,77,.35) 100%)'
@@ -123,7 +123,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Feature 2 */}
-          <div 
+          <div
             className="relative min-h-[400px] flex items-center justify-center text-white"
             style={{
               backgroundImage: 'url(https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg)',
@@ -131,7 +131,7 @@ const About: React.FC = () => {
               backgroundPosition: 'center'
             }}
           >
-            <div 
+            <div
               className="absolute inset-0"
               style={{
                 background: 'linear-gradient(90deg, rgba(32,55,84,.70) 0%, rgba(58,78,107,.35) 100%)'
@@ -161,7 +161,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Feature 3 */}
-          <div 
+          <div
             className="relative min-h-[400px] flex items-center justify-center text-white"
             style={{
               backgroundImage: 'url(https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg)',
@@ -169,7 +169,7 @@ const About: React.FC = () => {
               backgroundPosition: 'center'
             }}
           >
-            <div 
+            <div
               className="absolute inset-0"
               style={{
                 background: 'linear-gradient(135deg, rgba(45,55,72,.75) 0%, rgba(26,32,44,.40) 100%)'
@@ -223,7 +223,7 @@ const About: React.FC = () => {
                   </td>
                   <td className="px-6 py-4 text-black">
                     <div className="whitespace-pre-line">〒243-0014
-神奈川県厚木市旭町1-21-12 三紫ビル3A</div>
+                      神奈川県厚木市旭町1-21-12 三紫ビル3A</div>
                   </td>
                 </tr>
                 <tr className="border-b border-gray-100">

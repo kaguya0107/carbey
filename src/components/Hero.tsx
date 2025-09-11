@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
           loop
           playsInline
           preload="metadata"
-          poster="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg"
+          poster="/img3.jpg"
           className="w-full h-full object-cover"
           style={{
             filter: 'brightness(1.1) contrast(1.05)'

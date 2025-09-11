@@ -11,36 +11,36 @@ const Company: React.FC = () => {
   }, []);
 
   const companyData = [
-    { 
-      label: '会社名', 
+    {
+      label: '会社名',
       value: 'カーベイ株式会社'
     },
-    { 
-      label: '所在地', 
+    {
+      label: '所在地',
       value: '〒243-0014\n神奈川県厚木市旭町1-21-12 三紫ビル3A'
     },
-    { 
-      label: '設立', 
+    {
+      label: '設立',
       value: '2025年6月'
     },
-    { 
-      label: '代表者', 
+    {
+      label: '代表者',
       value: '代表取締役 山岡 淳宏'
     },
-    { 
-      label: 'TEL', 
+    {
+      label: 'TEL',
       value: '046-210-4561'
     },
-    { 
-      label: '資本金', 
+    {
+      label: '資本金',
       value: '300万円'
     },
-    { 
-      label: '顧問', 
+    {
+      label: '顧問',
       value: '弁護士：ITJ 法律事務所\n税理士：一戸税理士事務所'
     },
-    { 
-      label: '主要取引先', 
+    {
+      label: '主要取引先',
       value: 'オリックス自動車株式会社\nUSS株式会社\nオークネット株式会社\nzero株式会社\n株式会社リクルート\nプロトコーポレーション ほか'
     }
   ];
@@ -48,10 +48,10 @@ const Company: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-20 lg:py-32 text-white"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg)',
+          backgroundImage: 'url(./img7.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -100,7 +100,7 @@ const Company: React.FC = () => {
                   公正で透明性の高い中古車市場を築き、挑戦する全ての人が成功できる環境を創造してまいります。
                 </p>
               </div>
-              
+
               <div className="text-right mt-8 pt-6 border-t border-gray-200">
                 <p className="text-xl font-bold text-gray-900">
                   代表取締役　山岡 淳宏
@@ -134,9 +134,9 @@ const Company: React.FC = () => {
                         </td>
                         <td className="px-6 py-4 text-gray-900">
                           {item.isLink ? (
-                            <a 
-                              href={item.value} 
-                              target="_blank" 
+                            <a
+                              href={item.value}
+                              target="_blank"
                               rel="noopener noreferrer"
                               className="text-blue-600 hover:text-blue-800 underline"
                             >
@@ -229,7 +229,7 @@ const Company: React.FC = () => {
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-blue-300"></div>
-              
+
               <div className="space-y-12">
                 {[
                   { year: '2023', event: '構想開始・市場調査' },

@@ -26,7 +26,7 @@ const Services: React.FC = () => {
       <section
         className="py-20 lg:py-32 text-white relative"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg)',
+          backgroundImage: 'url("/img2.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
