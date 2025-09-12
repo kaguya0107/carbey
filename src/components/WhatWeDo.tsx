@@ -54,7 +54,6 @@ const WhatWeDo: React.FC = () => {
               <div className="text-center w-[70%]">
                 {/* <BarChart3 className="w-16 h-16 text-gray-600 mx-auto mb-4" /> */}
                 <img src='./icon1.png'></img>
-                <p className="text-gray-600 text-lg">アイコン</p>
               </div>
             </div>
           </div>
