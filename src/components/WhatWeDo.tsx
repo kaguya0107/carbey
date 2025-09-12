@@ -35,12 +35,12 @@ const WhatWeDo: React.FC = () => {
               最新テクノロジーで中古車売買を<br />
               もっと簡単に。
             </h3>
-            
+
             <p className="text-lg text-gray-700 leading-relaxed">
               Carbeyは自社開発のデータ分析×自動売買システムを掛け合わせたフランチャイズシステムによって、誰でも中古車販売事業に参画できる仕組みを提供しています。
             </p>
 
-            <button 
+            <button
               onClick={() => setIsModalOpen(true)}
               className="bg-slate-800 text-white px-8 py-3 rounded font-medium hover:bg-slate-900 transition-all duration-200"
             >
@@ -51,8 +51,9 @@ const WhatWeDo: React.FC = () => {
           {/* Right Icon Area */}
           <div className="flex justify-center items-center">
             <div className="w-80 h-48 border-2 border-gray-400 rounded-lg flex items-center justify-center bg-white">
-              <div className="text-center">
-                <BarChart3 className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <div className="text-center w-[70%]">
+                {/* <BarChart3 className="w-16 h-16 text-gray-600 mx-auto mb-4" /> */}
+                <img src='./icon1.png'></img>
                 <p className="text-gray-600 text-lg">アイコン</p>
               </div>
             </div>
